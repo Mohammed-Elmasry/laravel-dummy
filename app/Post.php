@@ -23,4 +23,8 @@ class Post extends Model
             $query->whereRaw("name RLIKE '^[aeoiuAEOIU]'");
         });
     }
+
+    public function comments(){
+        $this->hasMany(Comment::class);
+    }
 }
